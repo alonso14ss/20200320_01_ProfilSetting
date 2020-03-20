@@ -12,8 +12,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             android:padding="15dp">
 
             <FrameLayout
@@ -23,45 +23,44 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:civ_border_color="#000000"
                     android:src="@drawable/dangdang_e"
-                    app:civ_border_width="2dp"/>
+                    app:civ_border_color="#000000"
+                    app:civ_border_width="2dp" />
 
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/camera"
                     android:layout_gravity="right|bottom"
-                    />
+                    android:src="@drawable/camera" />
 
             </FrameLayout>
 
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="naver1234@naver.com"/>
+                android:layout_marginTop="10dp"
+                android:text="naver1234@naver.com" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="15dp"
                 android:layout_height="15dp"
-                android:src="@drawable/rectangle"/>
-            
+                android:src="@drawable/rectangle" />
+
             <TextView
-                android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:text="이름"
-                android:textSize="23sp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="23sp" />
 
         </LinearLayout>
 
@@ -69,8 +68,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="이름 입력"
-            android:singleLine="true"/>
+            android:singleLine="true" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/rectangle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="연락처"
+                android:textColor="#000000"
+                android:textSize="23sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수정"
+                android:layout_gravity="right"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="연락처 입력"
+                android:singleLine="true" />
+
+
+        </FrameLayout>
 
     </LinearLayout>
 
