@@ -3,8 +3,11 @@ package co.kr.tjoeun.helloworld.a20200320_01_profilsetting;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
+import android.view.View;
 
 import co.kr.tjoeun.helloworld.a20200320_01_profilsetting.databinding.ActivityMainBinding;
 
@@ -29,6 +32,20 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        binding.profilPicBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                갤러리에서 사진을 가져오자!
+//                안드로이드가 제공하는 화면(갤러리) => intent로 이동!
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
+                startActivity(intent);
+
+            }
+        });
 
     }
 

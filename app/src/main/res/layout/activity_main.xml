@@ -19,13 +19,14 @@
             android:padding="15dp">
 
             <FrameLayout
+                android:id="@+id/profilPicBtn"
                 android:layout_width="120dp"
                 android:layout_height="120dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/dangdang_e"
+                    android:src="@drawable/moonchi"
                     app:civ_border_color="#000000"
                     app:civ_border_width="2dp" />
 
@@ -46,6 +47,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -57,7 +59,6 @@
                 android:src="@drawable/rectangle" />
 
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
