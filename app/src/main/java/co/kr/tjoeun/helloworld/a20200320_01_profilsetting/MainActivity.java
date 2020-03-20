@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import co.kr.tjoeun.helloworld.a20200320_01_profilsetting.databinding.ActivityMainBinding;
 
@@ -18,6 +19,12 @@ public class MainActivity extends BaseActivity {
 
         setupEvents();
         setValues();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("화면 재등장", "다시 나타날때 마다 실행");
     }
 
     @Override
