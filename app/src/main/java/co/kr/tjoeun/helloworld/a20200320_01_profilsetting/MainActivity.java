@@ -1,5 +1,6 @@
 package co.kr.tjoeun.helloworld.a20200320_01_profilsetting;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -12,6 +13,8 @@ import android.view.View;
 import co.kr.tjoeun.helloworld.a20200320_01_profilsetting.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseActivity {
+
+    private static final int REQUEST_FOR_ALBUM = 1000;
 
     ActivityMainBinding binding = null;
 
@@ -42,7 +45,7 @@ public class MainActivity extends BaseActivity {
                 Intent intent = new Intent(Intent.ACTION_PICK);
                 intent.setType("image/*");
                 intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_FOR_ALBUM);
 
             }
         });
@@ -51,6 +54,22 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_FOR_ALBUM) {
+
+            if (resultCode == RESULT_OK) {
+                if(data.getData() != null){
+                    Log.d("사진가져오기", data.getData().toString());
+                }
+            }
+
+        }
 
     }
 }
