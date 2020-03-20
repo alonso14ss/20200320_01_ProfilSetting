@@ -10,6 +10,8 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 
+import com.bumptech.glide.Glide;
+
 import co.kr.tjoeun.helloworld.a20200320_01_profilsetting.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseActivity {
@@ -47,6 +49,8 @@ public class MainActivity extends BaseActivity {
                 intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
                 startActivityForResult(intent, REQUEST_FOR_ALBUM);
 
+
+
             }
         });
 
@@ -66,6 +70,10 @@ public class MainActivity extends BaseActivity {
             if (resultCode == RESULT_OK) {
                 if(data.getData() != null){
                     Log.d("사진가져오기", data.getData().toString());
+
+                    Glide.with(mContext).load(data.getData()).into(binding.profileImg);
+//                    Glide.with(mContext).load(R.drawable.camera).into(binding.profileImg);
+
                 }
             }
 
