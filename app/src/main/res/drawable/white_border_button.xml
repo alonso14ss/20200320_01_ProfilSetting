@@ -10,6 +10,8 @@
                     android:shape="rectangle">
                     <solid
                         android:color="#000000"/>
+                    <corners
+                        android:radius="6dp"/>
                 </shape>
             </item>
             <item
@@ -21,6 +23,8 @@
                     android:shape="rectangle">
                     <solid
                         android:color="#ffffff"/>
+                    <corners
+                        android:radius="80dp"/>
                 </shape>
             </item>
         </layer-list>
@@ -31,9 +35,21 @@
         <layer-list>
             <item>
                 <shape
-                    android:shape="oval">
+                    android:shape="rectangle">
+                    <gradient
+                        android:startColor="#000000"
+                        android:endColor="#888888"/>
+                </shape>
+            </item>
+            <item
+                android:top="1dp"
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right="1dp">
+                <shape
+                    android:shape="rectangle">
                     <solid
-                        android:color="#ff0000"/>
+                        android:color="#dfdfdf"/>
                 </shape>
             </item>
         </layer-list>
